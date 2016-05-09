@@ -31,7 +31,7 @@ for j = 1:length(p)
             for k = 1:length(sc);
                 % remove spanning clusters
                 %length(sc)
-                lw = lw(lw~=sc(k));
+                lw = lw(lw ~= sc(k));
             end
         end
         
@@ -45,13 +45,13 @@ for j = 1:length(p)
     % n: vector of number of elements in each bin
     % s: location of all bin centers
     [n,s] = hist(allarea, L^2);
-    a = 1.2;        % basis for logartithmic bins
+    a = 1.2;                                % basis for logartithmic bins
     logamax = ceil(log(max(s)) / log(a));   % edge of largest bin
-    bins = a.^(0:1:logamax);            % bin edges
-    nl = histc(allarea, bins);          % histogram with new bins
-    ds = diff(bins);                    % bin sizes
+    bins = a.^(0:1:logamax);                % bin edges
+    nl = histc(allarea, bins);              % histogram with new bins
+    ds = diff(bins);                        % bin sizes
     sl = (bins(1:end-1) + bins(2:end))*0.5; % bin centers
-    nsl = nl(1:end-1)'./(M*L^2*ds);     % cluster number density
+    nsl = nl(1:end-1)'./(M*L^2*ds);         % cluster number density
     legendInfo{j} = sprintf('p = %.2f', p(j));
     loglog(sl, nsl);
     hold on;
