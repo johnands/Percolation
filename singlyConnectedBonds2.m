@@ -2,20 +2,16 @@ close all;
 clear all;
 clc;
 
-% part 1
-% nL = 7;
-% L = zeros(nL,1);
-% for i = 1:nL;
-%     L(i) = 2^(i+3);
-% end
-% Mi = zeros(nL,1);
-
-% part 2
-
+pc = 0.59275;
+p = pc:0.01:0.7;
+np = length(p);
+N = 200;
+Mi = zeros(np,1);
+L = 100;
 
 for i = 1:N
     % generate new realization for each Ni   
-    for j = 1:nL
+    for j = 1:np
         % generate percolating cluster
         % walk algorithm only works if we have percolation
         ncount = 0;
@@ -25,11 +21,11 @@ for i = 1:N
             if (ncount > 1000)
                 return
             end
-            z = rand(L(j), L(j));
-            m = z < pc;
+            z = rand(L, L);
+            m = z < p(j);
             [lw,num] = bwlabel(m,4);
             % percolating clusters in x-direction
-            perc_x = intersect(lw(1,:), lw(L(j),:));
+            perc_x = intersect(lw(1,:), lw(L,:));
             % stop loop if percolation
             perc = find(perc_x > 0);     
         end
@@ -42,23 +38,25 @@ for i = 1:N
         % walkers have visited
         zzz = l.*r;
         % find mass of singly connected bonds
-        Mi(j) = Mi(j) + length(find(zzz));   
+        Mi(j) = Mi(j) + length(find(zzz));
     end
     
     % print progression
-    if mod(i,2) == 0
+    if mod(i,10) == 0
         i
     end
 end
 
-M = Mi/N;
-loglog(L, M, 'b--o');
-polynomial1 = polyfit(log(L), log(M), 1);
-polynomial2 = polyfit(L, M, 1);
-polynomial1(1)
-fit = polyval(polynomial2, L);
-legend('Measurements')
-xlabel('L', 'FontSize', 14);
-ylabel('$M_{SC}$', 'Interpreter', 'Latex', 'FontSize', 14);
-title('Mass of singly connected bonds')
-
+P = Mi./(N*L^2);
+subplot(2,1,1)
+plot(p-pc, P);
+xlabel('$p-p_c$', 'Interpreter', 'Latex', 'FontSize', 14);
+ylabel('$P_{SC}$', 'Interpreter', 'Latex', 'FontSize', 14);
+title('Density of singly connected bonds')
+axis('square')
+subplot(2,1,2)
+loglog(p-pc, P);
+xlabel('$p-p_c$', 'Interpreter', 'Latex', 'FontSize', 14);
+ylabel('$P_{SC}$', 'Interpreter', 'Latex', 'FontSize', 14);
+title('Logarithmic plot');
+axis('square')

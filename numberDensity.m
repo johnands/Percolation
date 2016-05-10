@@ -2,9 +2,9 @@ close all;
 clear all;
 clc;
 
-M = 500;       % number of realizations / measurements
-L = 100;
-p = [0.70 0.65 0.61];
+M = 300;       % number of realizations / measurements
+L = 200;
+p = [0.54 0.55 0.56 0.57 0.58 0.59];
 pc = 0.59275;      % percolation treshold
 allarea = [];      % areas of all clusters sampled M times
 legendInfo = cell(length(p), 1);
@@ -27,7 +27,7 @@ for j = 1:length(p)
         % remove sites that are not part of clusters
         % sc now contains the indicies of eventual spanning clusters
         sc = sc(sc~=0);
-        if length(sc) > 0;
+        if ~isempty(sc);
             for k = 1:length(sc);
                 % remove spanning clusters
                 %length(sc)
@@ -55,22 +55,20 @@ for j = 1:length(p)
     legendInfo{j} = sprintf('p = %.2f', p(j));
     loglog(sl, nsl);
     hold on;
+    
+    % print progression
+    j
 end
-hold off;
 legend(legendInfo);
 xlabel('$$ \mathrm{log_{10}}\, s $$', 'Interpreter', 'latex');
 ylabel('$$ \mathrm{log_{10}}\, n(s,p) $$', 'Interpreter', 'latex');
 
-
-% [n,s] = hist(allarea,L^2);
-% nsp = n/(L^2*M);
-% i = find(n > 0);
-% subplot(3,1,1)
-% plot(s(i), nsp(i), 'ok');
-% xlabel('s'); ylabel('n(s,p)');
-% subplot(3,1,2)
-% loglog(s(i), nsp(i), 'ok');
-% xlabel('s'); ylabel('n(s,p)');
-
+% plot intersection line
+sl = sl(nsl~=0);
+nsl = nsl(nsl~=0);
+poly = polyfit(log(sl), log(nsl), 1);
+intersection = poly(2)*sl.^(poly(1));
+loglog(sl, intersection, 'k--');
+hold off;
 
 
