@@ -3,8 +3,8 @@ clear all;
 clc;
 
 M = 300;       % number of realizations / measurements
-L = 200;
-p = [0.54 0.55 0.56 0.57 0.58 0.59];
+L = 512;
+p = [0.45 0.50 0.54 0.57 0.58];
 pc = 0.59275;      % percolation treshold
 allarea = [];      % areas of all clusters sampled M times
 legendInfo = cell(length(p), 1);
@@ -67,7 +67,7 @@ ylabel('$$ \mathrm{log_{10}}\, n(s,p) $$', 'Interpreter', 'latex');
 sl = sl(nsl~=0);
 nsl = nsl(nsl~=0);
 poly = polyfit(log(sl), log(nsl), 1);
-intersection = poly(2)*sl.^(poly(1));
+intersection = 0.5*10^(poly(2))*sl.^(poly(1));
 loglog(sl, intersection, 'k--');
 hold off;
 
