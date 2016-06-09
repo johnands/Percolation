@@ -2,14 +2,15 @@ close all;
 clear all;
 clc;
 
-M = 100;       % number of realizations / measurements
-L = 100;
+M = 300;       % number of realizations / measurements
+L = 512;
 p = [0.45 0.50 0.54 0.57 0.58];
 pc = 0.59275;      % percolation treshold
+sigma = 36.0/91;
+tau = 187.0/91;
 allarea = [];      % areas of all clusters sampled M times
 legendInfo = cell(length(p), 1);
 for j = 1:length(p)
-    %allerea = [];
     for i = 1:M
         z = rand(L,L);
         m = z < p(j);
@@ -54,7 +55,7 @@ for j = 1:length(p)
     sl = (bins(1:end-1) + bins(2:end))*0.5; % bin centers
     nsl = nl(1:end-1)'./(M*L^2*ds);         % cluster number density
     legendInfo{j} = sprintf('p = %.2f', p(j));
-    loglog(sl, nsl);
+    loglog(sl*(abs(p(j)-pc))^(1.0/sigma), nsl.*sl.^tau);
     hold on;
     
     % print progression
@@ -65,11 +66,3 @@ xlabel('$$ \mathrm{log_{10}}\, s $$', 'Interpreter', 'latex');
 ylabel('$$ \mathrm{log_{10}}\, n(s,p) $$', 'Interpreter', 'latex');
 
 % plot intersection line
-sl = sl(nsl~=0);
-nsl = nsl(nsl~=0);
-poly = polyfit(log(sl), log(nsl), 1);
-intersection = 0.5*10^(poly(2))*sl.^(poly(1));
-loglog(sl, intersection, 'k--');
-hold off;
-
-

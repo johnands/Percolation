@@ -1,9 +1,9 @@
 clear;
 clc;
 
-p = (0.0:0.01:1.0);
+p = (0.0:0.005:1.0);
 nx = length(p);
-N = 100;
+N = 300;
 %Lx = 2;
 %Ly = 2;
 L = [1 2 3 4];
@@ -41,6 +41,9 @@ end
 legendInfo{j} = sprintf('L = %d', L(j));
 Pi(j,:) = Ni/N;
 P(j,:) = Mi/(N*L(j)^2);
+
+% print progression
+j
 end
 
 subplot(2,1,1)
