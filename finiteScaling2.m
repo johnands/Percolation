@@ -92,7 +92,7 @@ plot(Lnu, pList(:,1), '-o');
 legendInfo{1} = sprintf('p_{\\Pi=x} = %.1f', x(1));
 hold on;
 plot(Lnu, pList(:,2), '-o');
-legendInfo{3} = sprintf('p_{\\Pi=x} = %.1f', x(2));
+legendInfo{2} = sprintf('p_{\\Pi=x} = %.1f', x(2));
 
 % "extrapolate" to the y-axis
 poly03 = polyfit(Lnu', pList(:,1), 1);
@@ -104,13 +104,16 @@ fit08 = poly08(1)*L_extra + poly08(2);
 
 plot(L_extra, fit03, '--')
 plot(L_extra, fit08, '--')
-legendInfo{2} = sprintf('Fit p_{\\Pi=x} = %.1f', x(1));
+legendInfo{3} = sprintf('Fit p_{\\Pi=x} = %.1f', x(1));
 legendInfo{4} = sprintf('Fit p_{\\Pi=x} = %.1f', x(2));
-legend(legendInfo, 'Location', 'NorthWest');
-xlabel('L', 'FontSize', 12);
-ylabel('p', 'FontSize', 12);
+hlegend = legend(legendInfo, 'Location', 'NorthWest');
+set(hlegend, 'FontSize', 15);
+xlabel('L', 'FontSize', 15);
+ylabel('p', 'FontSize', 15);
 hold off;
 
 pc1 = fit03(1)
 pc2 = fit08(1)
+
+
 

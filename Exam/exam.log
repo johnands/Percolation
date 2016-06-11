@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.9)  9 JUN 2016 22:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.9)  11 JUN 2016 19:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -749,6 +749,18 @@ LaTeX Warning: Label `fig:fig9' multiply defined.
 
 LaTeX Warning: Label `fig:fig9' multiply defined.
 
+
+LaTeX Warning: Label `fig:fig10' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig10' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig10' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig10' multiply defined.
+
 )
 \openout1 = `exam.aux'.
 
@@ -1089,12 +1101,17 @@ Package pdftex.def Info: ../../molecular-dynamics-fys3150/figures/diffusionSphe
 resT15.pdf used on input line 777.
 (pdftex.def)             Requested size: 398.33858pt x 201.24455pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 792--793
+Underfull \hbox (badness 10000) in paragraph at lines 782--788
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 801--802
 
  []
 
 [14 <../../molecular-dynamics-fys3150/figures/diffusionSpheresT15.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 845--848
+Underfull \hbox (badness 10000) in paragraph at lines 854--857
 
  []
 
@@ -1102,11 +1119,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 845--848
 File: ../Figures/porousMedium10x10.png Graphic file (type png)
 
 <use ../Figures/porousMedium10x10.png>
-Package pdftex.def Info: ../Figures/porousMedium10x10.png used on input line 86
-5.
+Package pdftex.def Info: ../Figures/porousMedium10x10.png used on input line 87
+4.
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
  [15]
-Underfull \hbox (badness 10000) in paragraph at lines 871--881
+Underfull \hbox (badness 10000) in paragraph at lines 880--890
 
  []
 
@@ -1114,12 +1131,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 871--881
 File: ../Figures/clusters100x100.png Graphic file (type png)
 
 <use ../Figures/clusters100x100.png>
-Package pdftex.def Info: ../Figures/clusters100x100.png used on input line 897.
+Package pdftex.def Info: ../Figures/clusters100x100.png used on input line 906.
 
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
  [16 <../Figures/porousMedium10x10.png (PNG copy)> <../Figures/clusters100x100.
 png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 948--949
+Underfull \hbox (badness 10000) in paragraph at lines 957--958
 
  []
 
@@ -1127,27 +1144,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 948--949
 File: ../Figures/PiAndPL50.png Graphic file (type png)
 
 <use ../Figures/PiAndPL50.png>
-Package pdftex.def Info: ../Figures/PiAndPL50.png used on input line 1000.
+Package pdftex.def Info: ../Figures/PiAndPL50.png used on input line 1009.
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
  [18 <../Figures/PiAndPL50.png (PNG copy)>]
 <../Figures/PiAndPL1234.png, id=677, 1445.4pt x 714.41907pt>
 File: ../Figures/PiAndPL1234.png Graphic file (type png)
 
 <use ../Figures/PiAndPL1234.png>
-Package pdftex.def Info: ../Figures/PiAndPL1234.png used on input line 1032.
+Package pdftex.def Info: ../Figures/PiAndPL1234.png used on input line 1041.
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1066--1071
+Underfull \hbox (badness 10000) in paragraph at lines 1075--1080
 
  []
 
 [19 <../Figures/PiAndPL1234.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 1096--1100
+Underfull \hbox (badness 10000) in paragraph at lines 1105--1109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1105--1108
+Underfull \hbox (badness 10000) in paragraph at lines 1114--1117
 
  []
 
@@ -1155,7 +1172,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1105--1108
 File: ../Figures/cnd1d.png Graphic file (type png)
 
 <use ../Figures/cnd1d.png>
-Package pdftex.def Info: ../Figures/cnd1d.png used on input line 1117.
+Package pdftex.def Info: ../Figures/cnd1d.png used on input line 1126.
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
  [20 <../Figures/cnd1d.png (PNG copy)>]
 <../Figures/cndDataCollapse1d.png, id=688, 1445.4pt x 714.41907pt>
@@ -1163,7 +1180,7 @@ File: ../Figures/cndDataCollapse1d.png Graphic file (type png)
 
 <use ../Figures/cndDataCollapse1d.png>
 Package pdftex.def Info: ../Figures/cndDataCollapse1d.png used on input line 11
-51.
+60.
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
  [21 <../Figures/cndDataCollapse1d.png (PNG copy)>]
 <../Figures/scalingClusterSize512.png, id=692, 1445.4pt x 714.41907pt>
@@ -1171,7 +1188,7 @@ File: ../Figures/scalingClusterSize512.png Graphic file (type png)
 
 <use ../Figures/scalingClusterSize512.png>
 Package pdftex.def Info: ../Figures/scalingClusterSize512.png used on input lin
-e 1219.
+e 1228.
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
 
 <../Figures/charClusterSizeDivergence.png, id=693, 1445.4pt x 714.41907pt>
@@ -1179,7 +1196,7 @@ File: ../Figures/charClusterSizeDivergence.png Graphic file (type png)
 
 <use ../Figures/charClusterSizeDivergence.png>
 Package pdftex.def Info: ../Figures/charClusterSizeDivergence.png used on input
- line 1226.
+ line 1235.
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
  [22 <../Figures/scalingClusterSize512.png (PNG copy)>]
 <../Figures/cndDataCollapse2d.png, id=697, 1445.4pt x 714.41907pt>
@@ -1187,37 +1204,97 @@ File: ../Figures/cndDataCollapse2d.png Graphic file (type png)
 
 <use ../Figures/cndDataCollapse2d.png>
 Package pdftex.def Info: ../Figures/cndDataCollapse2d.png used on input line 12
-55.
+64.
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1265--1266
+Underfull \hbox (badness 10000) in paragraph at lines 1274--1275
 
  []
 
 [23 <../Figures/charClusterSizeDivergence.png (PNG copy)> <../Figures/cndDataCo
 llapse2d.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 1267--1273
+Underfull \hbox (badness 10000) in paragraph at lines 1276--1282
 
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 1384--1385
+Underfull \hbox (badness 10000) in paragraph at lines 1393--1394
 
  []
 
-[25] (./exam.aux)
+[25] <../Figures/finiteScaling2.png, id=710, 1445.4pt x 714.41907pt>
+File: ../Figures/finiteScaling2.png Graphic file (type png)
+
+<use ../Figures/finiteScaling2.png>
+Package pdftex.def Info: ../Figures/finiteScaling2.png used on input line 1455.
+
+(pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
+
+<../Figures/finiteScalingDp.png, id=711, 1445.4pt x 714.41907pt>
+File: ../Figures/finiteScalingDp.png Graphic file (type png)
+
+<use ../Figures/finiteScalingDp.png>
+Package pdftex.def Info: ../Figures/finiteScalingDp.png used on input line 1464
+.
+(pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
+ [26 <../Figures/finiteScaling2.png (PNG copy)>]
+<../Figures/finiteScalingPiEsimatePc.png, id=715, 1445.4pt x 714.41907pt>
+File: ../Figures/finiteScalingPiEsimatePc.png Graphic file (type png)
+
+<use ../Figures/finiteScalingPiEsimatePc.png>
+Package pdftex.def Info: ../Figures/finiteScalingPiEsimatePc.png used on input 
+line 1473.
+(pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
+
+<../Figures/dataCollapsePi.png, id=716, 1445.4pt x 714.41907pt>
+File: ../Figures/dataCollapsePi.png Graphic file (type png)
+
+<use ../Figures/dataCollapsePi.png>
+Package pdftex.def Info: ../Figures/dataCollapsePi.png used on input line 1482.
+
+(pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
+ [27 <../Figures/finiteScalingDp.png (PNG copy)> <../Figures/finiteScalingPiEsi
+matePc.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 1490--1491
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1492--1497
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1516--1526
+
+ []
+
+[28 <../Figures/dataCollapsePi.png (PNG copy)>] [29]
+<../Figures/singlyConnectedBonds.png, id=726, 1445.4pt x 714.41907pt>
+File: ../Figures/singlyConnectedBonds.png Graphic file (type png)
+
+<use ../Figures/singlyConnectedBonds.png>
+Package pdftex.def Info: ../Figures/singlyConnectedBonds.png used on input line
+ 1665.
+(pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
+ [30]
+Underfull \hbox (badness 10000) in paragraph at lines 1675--1676
+
+ []
+
+[31 <../Figures/singlyConnectedBonds.png (PNG copy)>] [32] (./exam.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7714 strings out of 495028
- 108279 string characters out of 6181498
- 278413 words of memory out of 5000000
- 10737 multiletter control sequences out of 15000+600000
+ 7740 strings out of 495028
+ 109140 string characters out of 6181498
+ 292423 words of memory out of 5000000
+ 10758 multiletter control sequences out of 15000+600000
  19016 words of font info for 56 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,12n,40p,338b,1532s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,12n,40p,338b,1534s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/fenics/.texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/
 fenics/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/fenics/.te
 xmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/fenics/.texmf-var/fo
@@ -1235,10 +1312,10 @@ fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy7.pfb>
-Output written on exam.pdf (25 pages, 742262 bytes).
+Output written on exam.pdf (32 pages, 902995 bytes).
 PDF statistics:
- 1022 PDF objects out of 1200 (max. 8388607)
- 244 compressed objects within 3 object streams
+ 1053 PDF objects out of 1200 (max. 8388607)
+ 259 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

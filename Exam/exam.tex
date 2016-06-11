@@ -781,10 +781,19 @@ tidssteg, før jeg kjører uten termostat i 1000 tidssteg til. Her er resultatet
 \end{figure}
 Vi ser at $D$ er større enn det ikke-porøse system, noe som er naturlig siden vi har lavere tetthet, som 
 fører til at atomene har mer plass til å bevege seg, de blir mindre påvirket av krefter fra andre atomer. 
+Dersom tettheten hadde vært den samme derimot, så ville $D$ vært mindre fordi bevegelsen til atomene 
+er begrenset av den solide matrisen. 
 Også her er $\langle r^2(t) \rangle$ lineær i tid, og vi kan finne $D$ på samme måte. Vi må her huske på
-å kun se på diffusjonen til partiklene som beveger seg. 
+å kun se på diffusjonen til partiklene som beveger seg. \\
 
-DIFFUSJON I BULK LIQUID OG STØRRE NANOPORØST SYSTEM???
+\noindent
+Et større nanoporøst system kan være et perkolasjonssystem. Her avhenger diffusjon av $p$. 
+Dersom vi har $p < p_c$ vil partiklene begrenses av clusterstørrelsen, som vil være liten 
+i forhold til systemstørrelsen $L$. Når $p \to p_c$ vil den typiske clusterstørrelsen gå mot uendelig 
+(i teorien), men i et endelig system vil den typiske clusterstørrelsen være av størrelse $L$. 
+Når $p$ nærmer seg 1 vil så og si alle sites være okkupert, og vi vil få en oppførsel lik 
+en bulk (vanlig) væske. 
+
 
 
 \subsection{9 Flow in a nanoporous material}
@@ -820,22 +829,22 @@ altså har vi at
 \begin{equation}
  u(r) = \frac{nF}{4\mu}(a^2 - r^2)
 \end{equation}
-Hvis vi nå måler $u(r)$ kan vi regne ut viskositeten $\mu$. Darcys lov for porøst medium \eqref{DarcysLaw}
+Hvis vi nå måler $u(r)$ kan vi regne ut viskositeten $\mu$ ved å finne prop.konstanten til denne likningen, dvs.
+gjøre en fit. 
+Darcys lov for porøst medium \eqref{DarcysLaw}
 er altså
 \begin{equation}
  v_s = \frac{Q}{A} = \frac{k}{\mu}\frac{\Delta p}{L} = \frac{k}{\mu}\frac{nFL}{L} = \frac{k}{\mu}nF
 \end{equation}
 slik at $k$ kan beregnes ved følgende likning
 \begin{equation}
- k = \frac{\mu v_s}{nF}
+ k = \frac{\mu v_s}{nF}  = \frac{\mu}{nF}\frac{Q}{A}
 \end{equation}
-HVORDAN MÅLE Vs EVT Q??? Vs ER JO STRØMNINGSHASTIGHET, SOM BØR VÆRE CA DEN SAMME FOR ALLE 
-ATOMENE I X-RETNING? KAN JEG RETT OG SLETT BARE MÅLE DET SLIK?\\
-SER UT SOM GJ.SNITTLIG FART I X-RETNING GÅR MOT STATIONARY RUNDT 2001 TIME STEPS. 
-MÅ TESTE DET NÆRMERE. DA KAN JEG I SÅ FALL BARE LESE FRA DEN SISTE STATE-FILEN FOR Å 
-BEREGNE HASTIGHETSPROFILEN. HVIS IKKE MÅ JEG MIDLE OVER EN VISS TID, MEN BLIR JO IKKE HELT RIKTIG 
-DA SIDEN SYSTEMET IKKE ER I EN STATIONARY STATE. \\
-ER DET VIRKELIG SLIK JEG MÅLER PERMEABILITET???? (SOM OVENFOR)
+Vi har her to valg: Enten måle volumstrømningsraten $Q$ eller strømningshastigheten $v_s$. 
+Volumstrømningsraten er vanskelig å måle, det måtte i så fall vært partikkelstrømningsrate vi skulle ha målt. 
+$v_s$ er gj.sn. strømingshastighet dersom vi antar at væsken strømmer gjennom tomrom, altså enkelfasestrømning. 
+Det kan vi anta her, siden væsken strømmer gjennom porer. Altså kan vi måle $v_s$ etter systemet har nådd
+en stabil tilstand for å regne ut $k$ etter vi har regnet ut $\mu$. 
 
 
 \section{Percolation}
@@ -1384,10 +1393,362 @@ M(p,L) \propto
 How can we use this to find the scaling exponent $\nu$ and the percolation treshold $p_c$?}\\
 
 \noindent
+I finite scaling sier noe om endring i et systems oppførsel når størrelsen er endelig. 
+Vi deler inn i to kategorier:
+\begin{enumerate}
+ \item $L \ll \xi$, systemet ser ut som det er ved $p_c$, men vi kan ikke vite om det er det
+ \item $L \gg \xi$, systemet er ca homogent ved lengder større enn $\xi$
+\end{enumerate}
+Vi vil studere den termodynamiske grensen ($L \to \infty$) til en størrelse $X(p)$ som
+oppfører seg som en potenslov når $p \to p_c$, dvs. 
+\begin{equation}
+ X(p) \propto (p-p_c)^{-\gamma_x}
+\end{equation}
+Vi gjør følgende scaling ansats:
+\begin{equation}
+ X(p, L) = L^{\gamma_x/\nu} \chi(L/\xi)
+\end{equation}
+eller ekvivalent
+\begin{equation}
+ X(p,L) = L^{\gamma_x/\nu} \bar{\chi}(L/\xi)
+\end{equation}
+ 
+\subsubsection{For $\Pi(p,L)$}
+Vi antar at $\Pi$ ikke har noen potensavhengighet av $\xi$, slik at
+\begin{align}
+ \Pi(p,L) &= \xi^0f(L/\xi) = f(L/\xi) \\
+          &= f\left(\frac{1}{\xi_0(p-p_c)^{-\nu}}\right) \\
+          &= f(\frac{L(p-p_c)^\nu}{\xi_0}) \\
+          &= \hat{f}([L^{1/\nu}(p-p_c)]^\nu) \\
+          &= \Phi[(p-p_c)L^{1/\nu}]
+\end{align}
+hvor vi har brukt at $\xi = (p-p_c)^{-\nu}$ og der $\hat{f}(u) = f(u/\xi_0)$ og
+$\Phi(u) = \hat{f}(u^\nu)$. Vi kan bruke denne scaling ansatzen til å 
+estimere $p_c$. Vi definerer
+\begin{equation}
+ p_{\Pi = x}(L)
+\end{equation}
+som den verdien av $p$ som gir $\Pi = x$, denne verdien er en funksjon av $p$. 
+Setter inn dette i scaling ansatzen:
+\begin{equation}
+ x = \Phi[(p_{\Pi=x}(L) - p_c)L^{1/\nu}]
+\end{equation}
+som kan løses som 
+\begin{equation}
+ (p_{\Pi=x} - p_c)L^{1/\nu} = \Phi^{-1}(x) = C_x
+\end{equation}
+altså avhenger høyresiden kun av $x$ og ikke av $L$. Dette kan skrives
+\begin{equation}
+ p_{\Pi=x} - p_c = C_xL^{-1/\nu}
+\end{equation}
+Dersom vi har to $x$-verdier $x_1$ og $x_2$, får vi
+\begin{equation}
+ dp = p_{\Pi=x_1}(L) - p_{\Pi=x_2}(L) = (C_{x_1} - C_{x_2})L^{-1/\nu}
+\end{equation}
+altså kan vi plotte $\log(dp)$ som en funksjon av $\log(L)$ for å finne $\nu$, og så 
+bruke likningen over til å finne $p_c$. Dette kan gjøres numerisk. Vi velger $x_1=0.3$ og $x_2=0.8$. 
+For $L=[25,50,100,200,400,800]$ og for begge $x$ finner vi $\Pi(p,L)$, først for $p_c$. Dersom
+vi får $\Pi(p,L) < x$ øker vi $p$, hvis ikke minker vi den. Denne algoritmen kjøres 10 ganger. Til 
+slutt plotter vi $p_{\Pi = x}$ for begge $x$ som funksjon av $L$:
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width = 140mm]{../Figures/finiteScaling2.png}
+  \caption{$p_{\Pi=x}$ for to $x$ som funksjon av systemstørrelse}
+  \label{fig:fig10}
+  \end{center}
+\end{figure}
+Vi ser at begge går $p\to p_c$ når $L$ øker, som forventet, $\Pi(p,L)$ går mot en stepfunksjon. For 
+å finne $\nu$ plotter vi $p_{\Pi=0.3}(L) - p_{\Pi=0.8}(L)$ som funksjon av $L$ i loglog-plot:
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width = 140mm]{../Figures/finiteScalingDp.png}
+  \caption{Finner $\nu$}
+  \label{fig:fig10}
+  \end{center}
+\end{figure}
+Til slutt plotter vi $p_{\Pi=x}$ som funksjon av $L^{-1/\nu}$ for å estimere $p_c$, som vil være
+skjæringspunktet med $y$-aksen. 
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width = 140mm]{../Figures/finiteScalingPiEsimatePc.png}
+  \caption{$p_{\Pi=x}$ for to $x$ som funksjon av systemstørrelse}
+  \label{fig:fig10}
+  \end{center}
+\end{figure}
+Vi kan så plotte $\Pi(p,L)$ for flere $L$ som funksjon av $(p-p_c)L^{1/\nu}$ for å lage en datakollaps
+for å finne skaleringsfunksjonen $\Phi$. Alle kurvene for forskjellige $L$ vil ligge oppå hverandre:
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width = 140mm]{../Figures/dataCollapsePi.png}
+  \caption{Datakollaps for perkolasjonssannsynligheten}
+  \label{fig:fig10}
+  \end{center}
+\end{figure}
+
+\subsection{ 18. Subsets of the spanning cluster}
+\textit{Introduce and discuss the scaling of subsets of the spanning cluster.
+How can we measure the singly-connected bonds, and how does it scale?} \\
+
+\noindent
+Singly-connected sites:
+\indent \textit{Har den egenskapen at dersom en fjernes vil ikke spanning cluster spanne lenger. 
+Dvs. at singly connected bonds er de sites som alle stier som spanner systemet må gå gjennom. 
+De er krysningspunktene til alle SAW-ene som strekker seg fra en siden til en annen }\\
+
+En SAW (self-avoiding walk) er en walk på en lattice som ikke besøker samme site mer enn en gang. 
+Vi har følgende skalering for SCB:
+\begin{equation}
+ M_{SC} \propto L^{D_{SC}}
+\end{equation}
+der $D_{SC} < D$. Den korteste SAW mellom to sider har skaleringen
+\begin{equation}
+ L_{min} \propto L^{D_{min}}
+\end{equation}
+og tilsvarende for den lengste SAW-en, vi har $D_{min} \leq D_{max}$. \\
+\noindent Backbone:
+\indent \textit{Backbone er unionen av alle SAW-ene som connecter to sider. Dette omfatter
+alle sites som er tilgjengjelige for væskestrøming.}\\
+Backbone-sitene har minst to forskjellige stier som leder inn til dem, en fra hver side av clusteren. 
+De resterende sitene i clusteren har bare en sti, og kalles \textit{dangling ends}. Dangling ends kan 
+blit kuttet fra clusteren ved å fjerne kun en site. Vi har dermed følgende skaleringshierarki:
+\begin{equation}
+ D_{SC} \leq D_{min} \leq D_{SAW} \leq D_{max} \leq D_B \leq D \leq d
+\end{equation}
+Vi kan derfor beskrive geometrien til en cluster slik: Den kan deles inn i tre deler,
+dangling ends, et sett av klynger der vi har flere parallelle stier og the singly connected bonds,
+som knytter sammen klyngene til hverandre og klyngene til dangling ends. Vi måler SCB ved å 
+implementere venstre/høyre-walker-algoritmen. Den består av to walkers som starter på den ene siden av
+den cluster og beveger seg til den andre siden med nærmeste-nabo-connectivite. Left-turning walker prøver alltid
+å gå til venstre, dersom det ikke er en fylt site der, går den rett fram osv, og motstatt for right-turning walker. 
+Den første som når den andre siden, stopper, den andre walker stopper når den når denne siten. 
+Sitene som besøkes av begge walkers er SCB, de en walker må gjennom for å komme til den andre siden. Unionen
+av de to walksene kalles external perimeter eller hull. \\
+
+\noindent
+Først lager vi en spanning cluster:
+\begin{lstlisting}
+lx = 64;
+ly = 64;
+p = 0.585;
+ncount = 0;
+perc = [];
+while (size(perc,1)==0)
+    ncount = ncount + 1;
+    if (ncount>1000)
+        return
+    end
+    z = rand(lx,ly) < p;
+    [lw,num] = bwlabel(z,4);
+    % percolating clusters?
+    perc_x = intersect(lw(1,:), lw(lx,:));
+    % find eventual percolating clusters, the loop then stops
+    perc = find(perc_x > 0)
+end
+\end{lstlisting}
+Deretter finner vi koordinatene til alle sitene som er en del av clusteren:
+\begin{lstlisting}
+s = regionprops(lw,'Area');
+clusterareas = cat(1,s.Area);
+% size of percolating cluster (cluster with most sites)
+maxarea = max(clusterareas);
+% index of cluster with max number of sites / spanning cluster
+i = find(clusterareas == maxarea);
+% find "coordinates" of all sites in spanning cluster
+zz = lw == i;
+\end{lstlisting}
+Nå er vi klare til å kjøre left-right-turning walker algoritme:
+\begin{lstlisting}
+[l,r] = walk(zz);
+\end{lstlisting}
+$l$ og $r$ er matriser som inneholder alle sitene i clusteren. Hvert element forteller hvor mange ganger
+hver walker har besøkt hver site. Walk-algoritmen settes i gang slik:
+\begin{lstlisting}
+nx = size(z,1);
+ny = size(z,2);
+i = find(z(1,:) > 0);   % occupied sites / sites part of cluster
+iy0 = i(1);             % starting point for walker (x and y switched)
+ix0 = 1;                % starting point for walker
+
+% First do left-turning walker
+dirs = zeros(4,2);
+dirs(1,1) = -1;
+dirs(1,2) = 0;
+dirs(2,1) = 0;
+dirs(2,2) = -1;
+dirs(3,1) = 1;
+dirs(3,2) = 0;
+dirs(4,1) = 0;
+dirs(4,2) = 1;
+
+nwalk = 1;
+ix = ix0;
+iy = iy0;
+dir = 1; % 1 = left, 2 = down, 3 = right, 4 = up;
+left = zeros(nx,ny); % number of times the walker passes each site
+\end{lstlisting}
+Når dette plottes har $x$ og $y$ byttet plass, dvs. at $y$ øker horisontalt mot høyre, mens $x$
+øker vertikal \textit{nedover}. Retning up defineres som positiv y-retning. Dvs. at hver walker
+starter i $x=1$ og den laveste $y$-verdien som er del av clusteren. Retningsmatrisen $dirs$ er
+definert slik at den første kolonnen er $x$, den andre $y$. Radene er hhv. left, down, right, up. 
+Dvs at $dirs(1,1)$ f.eks. svarer til at en walker går til venstre, som her er i negativ x-retning. 
+Slik gjøres walken for left-turning walker:
+\begin{lstlisting}
+ while (nwalk > 0)
+    left(ix,iy) = left(ix,iy) + 1; % passed once
+    % turn left until you find an occupied site
+    nfound = 0;
+    while (nfound == 0)
+        dir = dir - 1;
+        if (dir < 1)
+            dir = dir + 4;
+        end
+        % check this direction
+        iix = ix + dirs(dir,1);
+        iiy = iy + dirs(dir,2);
+        if (iix == nx+1)
+            nwalk = 0; % walker escaped, stop walk
+            iix = nx;
+            ix1 = ix;
+            iy1 = iy;
+        end
+        % Is there a site here?
+        if (iix > 0)
+            if (iiy > 0)
+               if (iiy < ny+1)
+                   if (z(iix,iiy) > 0) % there is a site here, move here
+                       ix = iix;
+                       iy = iiy;
+                       nfound = 1;
+                       dir = dir + 2;
+                       if (dir > 4)
+                           % so that walker tries left first
+                           dir = dir - 4;
+                       end
+                   end
+               end
+           end
+       end
+   end
+end
+\end{lstlisting}
+Vi kan så plotte ulike ting, vi finner dem slik:
+\begin{lstlisting}
+% find points where both l and r are non-zero, i.e singly connected bonds
+% some of these have value 1, i.e. the site have been visited once
+% by each walker. If value 2, then one of the walkers have visited the
+% singly-connected site twice. If 4, then both walkers have visited the
+% same singly-connected site twice.
+zzz = l.*r;
+% add percolating cluster and singly connected bonds
+% the sites corresponding to singly connected bonds will
+% have value 2, 3 or 5, the others that are part of the cluster 
+% will be 1
+zadd = zz + zzz;
+max(max(zadd))
+% percolating cluster
+subplot(2,2,1), imagesc(zz);
+title('Percolating cluster');
+% percolating cluster and singly connected bonds
+% the singly connected bonds will be coloured differently
+subplot(2,2,2), imagesc(zadd);
+title('Percolating cluster and singly connected bonds');
+% only singly connected bonds
+subplot(2,2,3), imagesc(zzz > 0);
+title('Singly connected bonds')
+% external perimeter
+subplot(2,2,4), imagesc(l+r > 0);
+title('External perimeter')
+\end{lstlisting}
+Ser slik ut:
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width = 140mm]{../Figures/singlyConnectedBonds.png}
+  \caption{SCB}
+  \label{fig:fig11}
+  \end{center}
+\end{figure}
 
 
+\subsection{ 19. Flow in a disordered system}
+\textit{How do you measure the conductivity of the spanning cluster? Discuss the scaling theory
+for the conductivity $\sigma(p,L)$ when $p > p_c$. Relate the results to permeability in a nanoporous
+system.} \\
 
+\noindent
+\textit{Konduktivitet} $\sigma$ er en innebygd egenskap ved et materiale ved en gitt temperatur, hvor god 
+ledningsevne materialet har. \textit{Konduktans} $G$ er avhengig av størrelsen og formen til materialet:
+\begin{equation}
+ G = \frac{L^{d-1}\sigma}{L} = L^{d-2}\sigma
+\end{equation}
+altså prop med tverrsnittsarealet og omvendt prop. med lengden. Volumfluksen er gitt ved Darcys lov, som 
+for det nanoporøse systemet ovenfor:
+\begin{equation}
+ \Phi = \frac{kA}{\mu L}\Delta p = L^{d-2}\frac{k}{\mu}\Delta p = G\Delta p
+\end{equation}
+altså er konduktansen prop.konstanten for fluksen og trykkforskjellen, jfr. Ohms lov. 
+Konduktiviteten er $\sigma = k/\mu$. For et perkolasjonssystem $L^d$, har vi at konduktansen er 1
+for bonds mellom okkuperte sites, og 0 for ikke-okkuperte bonds. Vi finner $G$ ved å måle
+total fluks ved en gitt trykkforskjell over sample:
+\begin{equation}
+ G = \frac{\Delta p}{\Phi} = G(p,L)
+\end{equation}
+Distribusjonen av flukser er
+\begin{equation}
+ \phi_{i,j} = g_{i,j}(p_i - p_j)
+\end{equation}
+der $g_{i,j} = k_{i,j}a/\mu l$ er konduktansen mellom nabosites $i$ og $j$, $l$ er avst. mellom dem og 
+$a$ er tverrsnittarealet til bindingen. I følge kontinuitetslikningen er total flukt i site $i$ summen
+av fluks inn i site $i$ fra alle nabosites $j$:
+\begin{equation}
+ \Phi_i = \sum_j g_{i,j} (p_i - p_j)
+\end{equation}
+Dette kan summeres for alle sites $i$, men bare sites ved grensene vil ha $\Phi_i \neq 0$. Ved alle andre
+sites vil det være like mye som strømmer inn som strømmer ut. Hvis man finner total fluks for systemet
+kan man finne total konduktans $G$, og dermed også konduktiviteten 
+\begin{equation}
+ \sigma = GL^{-(d-2)}
+\end{equation}
+MEN HVORDAN INDUSERER VI FLOW OVER PERKOLASJONSCLUSTER????
 
+\subsubsection{Skalering av konduktivitet}
+For et uendelig system må vi tar for oss konduktivitet, ikke konduktans. 
+Simuleringer har vist at $P \propto (p-p_c)^\beta$ når $p\to p_c$, der $\beta > 1$. 
+Konduktiviteten derimot, har en slakere kurve: $\sigma \propto  (p - p_c)^\mu$ der $\mu < 1$. 
+Dette forklares ved at dangling ends ikke bidrar til konduktivitet, kun backbone, og vi har 
+\begin{equation}
+ D_B < D
+\end{equation}
+Vi tar nå for oss et system der $p > p_c$ og $L \gg \xi$. Ved lengdeskalaer større enn $\xi$ vil systemet
+her være homogent (vi vil ha små clusters jevnt distribuert over en stor lengdeskala). Vi kan dele systemet
+inn i bokser av størrelse $\xi$. For et homogent system har vi derfor at konduktansen er
+\begin{equation}
+  G(\xi,L) = (L/\xi)^{d-2}G(\xi,\xi)
+\end{equation}
+hvor $G(\xi,\xi)$ er konduktiviteten i en boks, der vi har $L \propto \xi$. Konduktiviteten er da
+\begin{equation}
+ \sigma(\xi,L) = L^{-(d-2)}G(\xi,L) = \frac{G(\xi,\xi)}{\xi^{d-2}}
+\end{equation}
+$G(\xi,\xi)$ kan tolkes som konduktansen til spanning cluster ved $p=p_c$ fordi et system med $L=\xi$ er identisk 
+med et system ved $p = p_c$. Når $L \ll \xi$ oppfører systemet seg som om det er ved perkolasjonsterskelen, med 
+en uendelig korrelasjonslengde, derfor $G = G(\infty,L)$. Vi har at
+\begin{equation}
+ G(\infty,L) \propto L^{-\tilde{\zeta}_R}
+\end{equation}
+der vi har kan vise ved resistivitetsargumenter at
+\begin{equation}
+ D_{SC} \leq \tilde{\zeta}_R \leq D_{min}
+\end{equation}
+Dette kan vi bruke til å få en skalering av $G$ ved systemstørrelse $\xi$:
+\begin{equation}
+ G(\xi,\xi) \propto \xi^{-\tilde{\zeta}_R}
+\end{equation}
+For $p > p_c$ har vi da at
+\begin{equation}
+ \sigma \propto \frac{G(\xi,xi)}{\xi^{d-2}} \propto \xi^{-(d-2+\tilde{\zeta}_R)}
+ \propto (p-p_c)^{\nu(d-2+\tilde{\zeta}_R)} \propto (p-p_c)^\mu
+\end{equation}
+der $\mu = \nu(d - 2 + \tilde{\zeta}_R)$. Vi ser at for alle verdier $\tilde{\zeta}_R > 1/\nu$ så har vi 
+for $d=2$ at $\mu > 1$ som nevnt ovenfor. 
 
 
 
