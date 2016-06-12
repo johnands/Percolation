@@ -144,7 +144,8 @@ Vi bruker den symplektiske og numerisk stabile Velocity-Verlet-algoritmen for å
 Newtons likninger for hvert tidssteg. Denne utvikler posisjonene og hastighetene til alle 
 atomene fremover i tid. Symplektisk betyr at vi unngår \textit{energy drift}, dvs. at totalenergien
 øker eller minker litt over tid, selv om den egentlig skal være bevart for et lukket system / 
-mikrokanonisk ensemble. Energy drift kommer av av tidssteget ikke er uendelig lite. 
+mikrokanonisk ensemble. Energy drift kommer av av tidssteget ikke er uendelig lite.
+Med Velocity Verlet vil energien oscillere rundt den eksakte verdien. 
 Algoritmen er som følger:
 \begin{enumerate}
  \item Finn hastigheten for halve tidssteget fremover: 
@@ -164,7 +165,8 @@ Algoritmen er som følger:
   {\bf v}_i(t + \Delta t) = {\bf v}_i(t+\Delta t/2) + \frac{{\bf F}_i(t + \Delta t)}{2m} \Delta t
  \end{equation}
 \end{enumerate}
-Hver av disse likningene er variasjoner over Euler-metoden.
+Hver av disse likningene er utledet ved Euler-metoden. Velocity Verlet har en global feil som 
+går som $\mathcal{O}(\Delta t^2)$. 
 
 \subsubsection{Potensial}
 Vi ser fra Velocity-Verlet at kreftene på alle atomene bestemmes av et potensial $U$.
@@ -307,7 +309,9 @@ som å snitte over et ensemble av systemer. Hvor lengre tid hvor mindre blir
 den statistiske feilen.
 
 \noindent
-
+Temperaturfluktuasjonene kan være korrelert dersom tidssteget er for lite. 
+Vi kan lage en autokorrelasjonsfunksjon for temperaturfluktuasjonene og finne en ideel $\Delta t$ 
+for å få riktig standardavvik på fluktuasjonene. 
 
 \noindent
 For å simulere det kanoniske ensemblet bruker vi termostater. Det kanoniske kan utveksle energi
@@ -380,9 +384,14 @@ Disse målingene kan brukes til å simulere ekte gasser, væsker og (faste stoff
 
 
 \subsection{4 Measuring the diffusion constant in a molecular dynamics simulation}
+\textit{How to measure the diffusion constant in a molecular dynamics simulation - limitations
+and challanges. Compare with methods and results from random walk modeling}\\
 
+\noindent
 For å karakterisere transporten i en væske måler vi selvdiffusjonen til et atom, 
-dvs. måle posisjonen som en funksjon av tid $\vec{r}_i(t)$. Diffusjonskonstanten
+dvs. måle posisjonen som en funksjon av tid $\vec{r}_i(t)$. Selvdiffusjon er diffusjon av et stoffs
+egne atomer, dvs. at vi ikke har en blanding av stoffer og dermed ingen kjemisk potensial-gradient.
+Diffusjonskonstanten
 regnes ut fra mean square forflytning av alle atomer:
 \begin{equation}
  \langle r^2(t) \rangle = \frac{1}{N}\sum_{i=1}^N (\vec{r}(t) - \vec{r}_{initial})^2
@@ -391,6 +400,10 @@ I følge Einstein-relasjonen kan diffusjonen regnes ut fra stigningstallet til d
 \begin{equation}
  \langle r^2(t) \rangle = 6Dt \quad \textrm{when} \quad t \rightarrow \infty
 \end{equation}
+Denne formelen kan utledes vha. sannsynlighetsdistribusjonen for random walks, som er 
+en normaldistribusjon med snitt null og varians $2dDt$ der $d$ er dimensjonen til systemet. 
+Siden snittet er null vil mean square displacement være lik variansen, dvs. fluktuasjonene
+rundt den endelige, gj. sn. endelige posisjonen til random walken. 
 Vi forventer altså at $\langle r^2(t) \rangle$ skal være lineær med tiden for væskefasen av Argon.
 For fast stoff-fasen vil mean square displacement oscillere (latticevibrasjoner).
 Vi regner ut mean square displacement basert på posisjonene i xyz-filen som lages ved en kjøring.
@@ -457,7 +470,11 @@ Her er et plot av diffusjonskonstant som funksjon av temperatur:
 Vi ser at diffusjonskonstanten øker linært med temperaturen, $D \propto T$. 
 
 \subsection{5 Measuring the radial distribution function in molecular dynamics simulations}
+\textit{How can you measure the radial distribution function in a molecular dynamics simulation?
+What does it tell? What challenges will you face? Compare the measurement of the radial distribution
+function to the measurement of the probability densities for a random walk.}\\
 
+\noindent
 Den radielle distribusjonsfunksjonen $g(r)$ karakteriserer den mikroskopiske strukturen til et fluid.
 Den er definert som den radielle sannsynligheten for å finne et annet atom i avstand $r$ fra et 
 tilfeldig atom, mao. atomtettheten i et sfærisk skall av radius $r$ rundt et atom. 
@@ -527,10 +544,19 @@ Berendsen fungerer slik at den reskalerer hastighetene til alle atomene med en f
 \begin{equation}
  \gamma = \sqrt{1 + \frac{\Delta t}{\tau}\left(\frac{T_{bath}}{T} - 1\right)}
 \end{equation}
-for hvert tidssteg. $\tau$ er relaxation-tid, dvs. tiden det tar før systemet går tilbake til likevekt. 
+for hvert tidssteg. $\tau$ er relaxation-tid, dvs. tiden det tar før systemet går tilbake til likevekt.
 $\tau = \Delta t$ vil gjøre at temperaturen holder seg nøyaktig konstant, men bør settes til 
-10-20 ganger denne verdien. Berendsen motvirker fluktuasjoner i den kinetiske energien, og klarer derfor
-ikke å produsere baner i faserommet som korresponderer til det kanoniske ensemblet. Den er god på å holde
+10-20 ganger denne verdien. 
+Denne formelen har som utgangspunkt at temperaturforandringen er prop. med tempforskjellen mellom system
+og bath:
+\begin{equation}
+ \frac{dT}{dt} = \frac{1}{\tau}(T_0 - T)
+\end{equation}
+som fører til en eksponentiell nedgang av systemtemperaturen mot badtemperaturen. 
+Berendsen klarer
+ikke å produsere baner i faserommet som korresponderer til det kanoniske ensemblet pga.
+denne skaleringen av hastigheter, men den tillatter temperaturfluktuasjoner når $\tau  > \Delta t$.
+Den er god på å holde
 temperaturen konstant, tilfredsstiller Fourier'r lov om varmeoverføring. 
 
 \subsubsection{Andersen termostat}
@@ -548,8 +574,10 @@ Dette gjøres slik for hvert tidssteg:
        \item If $p < \Delta t/\tau$: Atomet får en ny hastighet
        \end{itemize}
 \end{itemize}
+$\tau$ er her kollisjonstid, og bør ha ca samme verdi som for Berendsen. 
 Andersen er god på å ekvilibrere system, men forstyrrer dynamikken i f.eks. lattice-vibrasjoner. 
-Kan dermed ikke brukes for å måle tidsavhengige størrelser som diffusjon. \\
+Kan dermed ikke brukes for å måle tidsavhengige størrelser som diffusjon.
+Derimot reproduserer Andersen det kanoniske ensemblet eksakt. \\
 
 \noindent
 Vi sammenlikner temperaturen som funksjon av tid for de to termostatene:
@@ -1251,7 +1279,7 @@ ved å gjøre en 1d polynomisk fit. Vi har altså følgende skaleringsteori for 
 \begin{equation}
  s_\xi = s_0|p-p_c|^{-1/\sigma}
 \end{equation}
-Vi kan finne $\tau$ ved å gjøre en lineær fit for $n(s,p)$ når $p \to p_c$ før vi når $s_\xi$. 
+Vi kan finne $\tau$ ved å gjøre en lineær fit for $n(s,p_c,L)$ for økende $L$ før vi når $s_\xi$. 
 $\sigma$ finner vi som beskrevet ovenfor vha. skjæringspunkter osv. Også her kan vi gjøre en datakollaps
 for å finne skaleringsfunksjonen $F(s/s_\xi)$. Vi kan skrive
 \begin{equation}

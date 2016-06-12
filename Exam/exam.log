@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.9)  11 JUN 2016 19:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.9)  12 JUN 2016 19:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -877,16 +877,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--136
 <lennard-jones.pdf, id=17, 1734.48pt x 876.27374pt>
 File: lennard-jones.pdf Graphic file (type pdf)
  <use lennard-jones.pdf>
-Package pdftex.def Info: lennard-jones.pdf used on input line 186.
+Package pdftex.def Info: lennard-jones.pdf used on input line 188.
 (pdftex.def)             Requested size: 398.33858pt x 201.24455pt.
 
 [2] [3 <./lennard-jones.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 267--268
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--277
+Underfull \hbox (badness 10000) in paragraph at lines 271--279
 
  []
 
@@ -898,15 +898,15 @@ file (type pdf)
 
 <use ../../molecular-dynamics-fys3150/figures/temperatureLattice8.pdf>
 Package pdftex.def Info: ../../molecular-dynamics-fys3150/figures/temperatureLa
-ttice8.pdf used on input line 298.
+ttice8.pdf used on input line 300.
 (pdftex.def)             Requested size: 398.33858pt x 201.24455pt.
  [4]
-Underfull \hbox (badness 10000) in paragraph at lines 336--337
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--340
+Underfull \hbox (badness 10000) in paragraph at lines 342--344
 
  []
 
@@ -918,7 +918,7 @@ e (type pdf)
 
 <use ../../molecular-dynamics-fys3150/figures/pressureNc10T100.pdf>
 Package pdftex.def Info: ../../molecular-dynamics-fys3150/figures/pressureNc10T
-100.pdf used on input line 353.
+100.pdf used on input line 357.
 (pdftex.def)             Requested size: 398.33858pt x 201.24455pt.
  [5 <../../molecular-dynamics-fys3150/figures/temperatureLattice8.pdf>]
 <../../molecular-dynamics-fys3150/figures/pressureVsT.pdf, id=122, 1734.48pt x 
@@ -927,10 +927,15 @@ File: ../../molecular-dynamics-fys3150/figures/pressureVsT.pdf Graphic file (ty
 pe pdf)
  <use ../../molecular-dynamics-fys3150/figures/pressureVsT.pdf>
 Package pdftex.def Info: ../../molecular-dynamics-fys3150/figures/pressureVsT.p
-df used on input line 361.
+df used on input line 365.
 (pdftex.def)             Requested size: 398.33858pt x 201.24455pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 375--377
+Underfull \hbox (badness 10000) in paragraph at lines 379--381
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 388--389
 
  []
 
@@ -941,12 +946,12 @@ pdfTeX warning: /usr/bin/pdflatex (file ../../molecular-dynamics-fys3150/figure
 s/pressureVsT.pdf): PDF inclusion: multiple pdfs with page group included in a 
 single page
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 393--400
+Underfull \hbox (badness 10000) in paragraph at lines 402--413
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--436
+Underfull \hbox (badness 10000) in paragraph at lines 444--449
 
  []
 
@@ -958,7 +963,7 @@ hic file (type pdf)
 
 <use ../../molecular-dynamics-fys3150/figures/diffusionThermalizedT15.pdf>
 Package pdftex.def Info: ../../molecular-dynamics-fys3150/figures/diffusionTher
-malizedT15.pdf used on input line 441.
+malizedT15.pdf used on input line 454.
 (pdftex.def)             Requested size: 398.33858pt x 201.24455pt.
 
 [7]
@@ -968,8 +973,12 @@ File: ../../molecular-dynamics-fys3150/figures/diffVsTemp.pdf Graphic file (typ
 e pdf)
  <use ../../molecular-dynamics-fys3150/figures/diffVsTemp.pdf>
 Package pdftex.def Info: ../../molecular-dynamics-fys3150/figures/diffVsTemp.pd
-f used on input line 452.
+f used on input line 465.
 (pdftex.def)             Requested size: 398.33858pt x 201.24455pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--476
+
+ []
 
 [8 <../../molecular-dynamics-fys3150/figures/diffusionThermalizedT15.pdf> <../.
 ./molecular-dynamics-fys3150/figures/diffVsTemp.pdf
@@ -985,7 +994,7 @@ e (type pdf)
 
 <use ../../molecular-dynamics-fys3150/figures/radialDistBins30.pdf>
 Package pdftex.def Info: ../../molecular-dynamics-fys3150/figures/radialDistBin
-s30.pdf used on input line 484.
+s30.pdf used on input line 501.
 (pdftex.def)             Requested size: 398.33858pt x 201.24455pt.
 
 <../../molecular-dynamics-fys3150/figures/radialDistLiquidBins50.pdf, id=289, 1
@@ -995,10 +1004,10 @@ ic file (type pdf)
 
 <use ../../molecular-dynamics-fys3150/figures/radialDistLiquidBins50.pdf>
 Package pdftex.def Info: ../../molecular-dynamics-fys3150/figures/radialDistLiq
-uidBins50.pdf used on input line 498.
+uidBins50.pdf used on input line 515.
 (pdftex.def)             Requested size: 398.33858pt x 201.24455pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 510--511
+Underfull \hbox (badness 10000) in paragraph at lines 527--528
 
  []
 
@@ -1009,7 +1018,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ../../molecular-dynamics-fys3150/figure
 s/radialDistLiquidBins50.pdf): PDF inclusion: multiple pdfs with page group inc
 luded in a single page
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 551--553
+Underfull \hbox (badness 10000) in paragraph at lines 577--581
 
  []
 
@@ -1021,7 +1030,7 @@ e (type pdf)
 
 <use ../../molecular-dynamics-fys3150/figures/tempGasBerendsen.pdf>
 Package pdftex.def Info: ../../molecular-dynamics-fys3150/figures/tempGasBerend
-sen.pdf used on input line 558.
+sen.pdf used on input line 586.
 (pdftex.def)             Requested size: 245.82962pt x 124.18839pt.
 
 <../../molecular-dynamics-fys3150/figures/tempGasAndersen.pdf, id=393, 1734.48p
@@ -1031,258 +1040,263 @@ File: ../../molecular-dynamics-fys3150/figures/tempGasAndersen.pdf Graphic file
 
 <use ../../molecular-dynamics-fys3150/figures/tempGasAndersen.pdf>
 Package pdftex.def Info: ../../molecular-dynamics-fys3150/figures/tempGasAnders
-en.pdf used on input line 564.
+en.pdf used on input line 592.
 (pdftex.def)             Requested size: 245.82962pt x 124.18839pt.
-
-<../../molecular-dynamics-fys3150/figures/energyGasBerendsen.pdf, id=394, 1734.
+ [10]
+<../../molecular-dynamics-fys3150/figures/energyGasBerendsen.pdf, id=398, 1734.
 48pt x 876.27374pt>
 File: ../../molecular-dynamics-fys3150/figures/energyGasBerendsen.pdf Graphic f
 ile (type pdf)
 
 <use ../../molecular-dynamics-fys3150/figures/energyGasBerendsen.pdf>
 Package pdftex.def Info: ../../molecular-dynamics-fys3150/figures/energyGasBere
-ndsen.pdf used on input line 575.
+ndsen.pdf used on input line 603.
 (pdftex.def)             Requested size: 245.82962pt x 124.18839pt.
 
-<../../molecular-dynamics-fys3150/figures/ernergyGasAndersen.pdf, id=395, 1734.
+<../../molecular-dynamics-fys3150/figures/ernergyGasAndersen.pdf, id=399, 1734.
 48pt x 876.27374pt>
 File: ../../molecular-dynamics-fys3150/figures/ernergyGasAndersen.pdf Graphic f
 ile (type pdf)
 
 <use ../../molecular-dynamics-fys3150/figures/ernergyGasAndersen.pdf>
 Package pdftex.def Info: ../../molecular-dynamics-fys3150/figures/ernergyGasAnd
-ersen.pdf used on input line 581.
+ersen.pdf used on input line 609.
 (pdftex.def)             Requested size: 245.82962pt x 124.18839pt.
- [10 <../../molecular-dynamics-fys3150/figures/tempGasBerendsen.pdf> <../../mol
-ecular-dynamics-fys3150/figures/tempGasAndersen.pdf
+
+Underfull \hbox (badness 10000) in paragraph at lines 623--624
+
+ []
+
+[11 <../../molecular-dynamics-fys3150/figures/tempGasBerendsen.pdf> <../../mole
+cular-dynamics-fys3150/figures/tempGasAndersen.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ../../molecular-dynamics-fys3150/figure
 s/tempGasAndersen.pdf): PDF inclusion: multiple pdfs with page group included i
 n a single page
->]
-Underfull \hbox (badness 10000) in paragraph at lines 595--596
+> <../../molecular-dynamics-fys3150/figures/energyGasBerendsen.pdf
 
- []
-
-[11 <../../molecular-dynamics-fys3150/figures/energyGasBerendsen.pdf> <../../mo
-lecular-dynamics-fys3150/figures/ernergyGasAndersen.pdf
+pdfTeX warning: /usr/bin/pdflatex (file ../../molecular-dynamics-fys3150/figure
+s/energyGasBerendsen.pdf): PDF inclusion: multiple pdfs with page group include
+d in a single page
+> <../../molecular-dynamics-fys3150/figures/ernergyGasAndersen.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ../../molecular-dynamics-fys3150/figure
 s/ernergyGasAndersen.pdf): PDF inclusion: multiple pdfs with page group include
 d in a single page
 >] [12]
-<../../molecular-dynamics-fys3150/figures/flowProfileSimplePlot.pdf, id=570, 17
+<../../molecular-dynamics-fys3150/figures/flowProfileSimplePlot.pdf, id=569, 17
 34.48pt x 876.27374pt>
 File: ../../molecular-dynamics-fys3150/figures/flowProfileSimplePlot.pdf Graphi
 c file (type pdf)
 
 <use ../../molecular-dynamics-fys3150/figures/flowProfileSimplePlot.pdf>
 Package pdftex.def Info: ../../molecular-dynamics-fys3150/figures/flowProfileSi
-mplePlot.pdf used on input line 714.
+mplePlot.pdf used on input line 742.
 (pdftex.def)             Requested size: 398.33858pt x 201.24455pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 735--743
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 749--750
+Underfull \hbox (badness 10000) in paragraph at lines 763--771
 
  []
 
 [13 <../../molecular-dynamics-fys3150/figures/flowProfileSimplePlot.pdf>]
-<../../molecular-dynamics-fys3150/figures/diffusionSpheresT15.pdf, id=600, 1734
+Underfull \hbox (badness 10000) in paragraph at lines 777--778
+
+ []
+
+
+<../../molecular-dynamics-fys3150/figures/diffusionSpheresT15.pdf, id=599, 1734
 .48pt x 876.27374pt>
 File: ../../molecular-dynamics-fys3150/figures/diffusionSpheresT15.pdf Graphic 
 file (type pdf)
 
 <use ../../molecular-dynamics-fys3150/figures/diffusionSpheresT15.pdf>
 Package pdftex.def Info: ../../molecular-dynamics-fys3150/figures/diffusionSphe
-resT15.pdf used on input line 777.
+resT15.pdf used on input line 805.
 (pdftex.def)             Requested size: 398.33858pt x 201.24455pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 782--788
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 801--802
+Underfull \hbox (badness 10000) in paragraph at lines 810--816
 
  []
 
 [14 <../../molecular-dynamics-fys3150/figures/diffusionSpheresT15.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 854--857
+Underfull \hbox (badness 10000) in paragraph at lines 829--830
 
  []
 
-<../Figures/porousMedium10x10.png, id=662, 1445.4pt x 714.41907pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 882--885
+
+ []
+
+[15] <../Figures/porousMedium10x10.png, id=664, 1445.4pt x 714.41907pt>
 File: ../Figures/porousMedium10x10.png Graphic file (type png)
 
 <use ../Figures/porousMedium10x10.png>
-Package pdftex.def Info: ../Figures/porousMedium10x10.png used on input line 87
-4.
+Package pdftex.def Info: ../Figures/porousMedium10x10.png used on input line 90
+2.
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
- [15]
-Underfull \hbox (badness 10000) in paragraph at lines 880--890
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--918
 
  []
 
-<../Figures/clusters100x100.png, id=666, 1445.4pt x 714.41907pt>
+<../Figures/clusters100x100.png, id=665, 1445.4pt x 714.41907pt>
 File: ../Figures/clusters100x100.png Graphic file (type png)
 
 <use ../Figures/clusters100x100.png>
-Package pdftex.def Info: ../Figures/clusters100x100.png used on input line 906.
+Package pdftex.def Info: ../Figures/clusters100x100.png used on input line 934.
 
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
- [16 <../Figures/porousMedium10x10.png (PNG copy)> <../Figures/clusters100x100.
-png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 957--958
+ [16 <../Figures/porousMedium10x10.png (PNG copy)>] [17 <../Figures/clusters100
+x100.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 985--986
 
  []
 
-[17] <../Figures/PiAndPL50.png, id=673, 1445.4pt x 714.41907pt>
+<../Figures/PiAndPL50.png, id=672, 1445.4pt x 714.41907pt>
 File: ../Figures/PiAndPL50.png Graphic file (type png)
 
 <use ../Figures/PiAndPL50.png>
-Package pdftex.def Info: ../Figures/PiAndPL50.png used on input line 1009.
+Package pdftex.def Info: ../Figures/PiAndPL50.png used on input line 1037.
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
- [18 <../Figures/PiAndPL50.png (PNG copy)>]
-<../Figures/PiAndPL1234.png, id=677, 1445.4pt x 714.41907pt>
+ [18]
+<../Figures/PiAndPL1234.png, id=676, 1445.4pt x 714.41907pt>
 File: ../Figures/PiAndPL1234.png Graphic file (type png)
 
 <use ../Figures/PiAndPL1234.png>
-Package pdftex.def Info: ../Figures/PiAndPL1234.png used on input line 1041.
+Package pdftex.def Info: ../Figures/PiAndPL1234.png used on input line 1069.
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1075--1080
-
- []
-
-[19 <../Figures/PiAndPL1234.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 1105--1109
+ [19 <../Figures/PiAndPL50.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 1103--1108
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1114--1117
+[20 <../Figures/PiAndPL1234.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1137
 
  []
 
-<../Figures/cnd1d.png, id=683, 1445.4pt x 714.41907pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1142--1145
+
+ []
+
+<../Figures/cnd1d.png, id=685, 1445.4pt x 714.41907pt>
 File: ../Figures/cnd1d.png Graphic file (type png)
 
 <use ../Figures/cnd1d.png>
-Package pdftex.def Info: ../Figures/cnd1d.png used on input line 1126.
+Package pdftex.def Info: ../Figures/cnd1d.png used on input line 1154.
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
- [20 <../Figures/cnd1d.png (PNG copy)>]
-<../Figures/cndDataCollapse1d.png, id=688, 1445.4pt x 714.41907pt>
+
+<../Figures/cndDataCollapse1d.png, id=686, 1445.4pt x 714.41907pt>
 File: ../Figures/cndDataCollapse1d.png Graphic file (type png)
 
 <use ../Figures/cndDataCollapse1d.png>
 Package pdftex.def Info: ../Figures/cndDataCollapse1d.png used on input line 11
-60.
+88.
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
- [21 <../Figures/cndDataCollapse1d.png (PNG copy)>]
-<../Figures/scalingClusterSize512.png, id=692, 1445.4pt x 714.41907pt>
+ [21 <../Figures/cnd1d.png (PNG copy)>]
+[22 <../Figures/cndDataCollapse1d.png (PNG copy)>]
+<../Figures/scalingClusterSize512.png, id=694, 1445.4pt x 714.41907pt>
 File: ../Figures/scalingClusterSize512.png Graphic file (type png)
 
 <use ../Figures/scalingClusterSize512.png>
 Package pdftex.def Info: ../Figures/scalingClusterSize512.png used on input lin
-e 1228.
+e 1256.
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
 
-<../Figures/charClusterSizeDivergence.png, id=693, 1445.4pt x 714.41907pt>
+<../Figures/charClusterSizeDivergence.png, id=695, 1445.4pt x 714.41907pt>
 File: ../Figures/charClusterSizeDivergence.png Graphic file (type png)
 
 <use ../Figures/charClusterSizeDivergence.png>
 Package pdftex.def Info: ../Figures/charClusterSizeDivergence.png used on input
- line 1235.
+ line 1263.
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
- [22 <../Figures/scalingClusterSize512.png (PNG copy)>]
-<../Figures/cndDataCollapse2d.png, id=697, 1445.4pt x 714.41907pt>
+ [23 <../Figures/scalingClusterSize512.png (PNG copy)>]
+<../Figures/cndDataCollapse2d.png, id=699, 1445.4pt x 714.41907pt>
 File: ../Figures/cndDataCollapse2d.png Graphic file (type png)
 
 <use ../Figures/cndDataCollapse2d.png>
 Package pdftex.def Info: ../Figures/cndDataCollapse2d.png used on input line 12
-64.
+92.
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1274--1275
+Underfull \hbox (badness 10000) in paragraph at lines 1302--1303
 
  []
 
-[23 <../Figures/charClusterSizeDivergence.png (PNG copy)> <../Figures/cndDataCo
+[24 <../Figures/charClusterSizeDivergence.png (PNG copy)> <../Figures/cndDataCo
 llapse2d.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 1276--1282
+Underfull \hbox (badness 10000) in paragraph at lines 1304--1310
 
  []
 
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 1393--1394
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 1421--1422
 
  []
 
-[25] <../Figures/finiteScaling2.png, id=710, 1445.4pt x 714.41907pt>
+[26] <../Figures/finiteScaling2.png, id=712, 1445.4pt x 714.41907pt>
 File: ../Figures/finiteScaling2.png Graphic file (type png)
 
 <use ../Figures/finiteScaling2.png>
-Package pdftex.def Info: ../Figures/finiteScaling2.png used on input line 1455.
+Package pdftex.def Info: ../Figures/finiteScaling2.png used on input line 1483.
 
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
 
-<../Figures/finiteScalingDp.png, id=711, 1445.4pt x 714.41907pt>
+<../Figures/finiteScalingDp.png, id=713, 1445.4pt x 714.41907pt>
 File: ../Figures/finiteScalingDp.png Graphic file (type png)
 
 <use ../Figures/finiteScalingDp.png>
-Package pdftex.def Info: ../Figures/finiteScalingDp.png used on input line 1464
+Package pdftex.def Info: ../Figures/finiteScalingDp.png used on input line 1492
 .
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
- [26 <../Figures/finiteScaling2.png (PNG copy)>]
-<../Figures/finiteScalingPiEsimatePc.png, id=715, 1445.4pt x 714.41907pt>
+ [27 <../Figures/finiteScaling2.png (PNG copy)>]
+<../Figures/finiteScalingPiEsimatePc.png, id=717, 1445.4pt x 714.41907pt>
 File: ../Figures/finiteScalingPiEsimatePc.png Graphic file (type png)
 
 <use ../Figures/finiteScalingPiEsimatePc.png>
 Package pdftex.def Info: ../Figures/finiteScalingPiEsimatePc.png used on input 
-line 1473.
+line 1501.
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
 
-<../Figures/dataCollapsePi.png, id=716, 1445.4pt x 714.41907pt>
+<../Figures/dataCollapsePi.png, id=718, 1445.4pt x 714.41907pt>
 File: ../Figures/dataCollapsePi.png Graphic file (type png)
 
 <use ../Figures/dataCollapsePi.png>
-Package pdftex.def Info: ../Figures/dataCollapsePi.png used on input line 1482.
+Package pdftex.def Info: ../Figures/dataCollapsePi.png used on input line 1510.
 
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
- [27 <../Figures/finiteScalingDp.png (PNG copy)> <../Figures/finiteScalingPiEsi
+ [28 <../Figures/finiteScalingDp.png (PNG copy)> <../Figures/finiteScalingPiEsi
 matePc.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 1490--1491
+Underfull \hbox (badness 10000) in paragraph at lines 1518--1519
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1492--1497
+Underfull \hbox (badness 10000) in paragraph at lines 1520--1525
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1516--1526
+Underfull \hbox (badness 10000) in paragraph at lines 1544--1554
 
  []
 
-[28 <../Figures/dataCollapsePi.png (PNG copy)>] [29]
-<../Figures/singlyConnectedBonds.png, id=726, 1445.4pt x 714.41907pt>
+[29 <../Figures/dataCollapsePi.png (PNG copy)>] [30]
+<../Figures/singlyConnectedBonds.png, id=728, 1445.4pt x 714.41907pt>
 File: ../Figures/singlyConnectedBonds.png Graphic file (type png)
 
 <use ../Figures/singlyConnectedBonds.png>
 Package pdftex.def Info: ../Figures/singlyConnectedBonds.png used on input line
- 1665.
+ 1693.
 (pdftex.def)             Requested size: 398.33858pt x 196.88554pt.
- [30]
-Underfull \hbox (badness 10000) in paragraph at lines 1675--1676
+ [31]
+Underfull \hbox (badness 10000) in paragraph at lines 1703--1704
 
  []
 
-[31 <../Figures/singlyConnectedBonds.png (PNG copy)>] [32] (./exam.aux)
+[32 <../Figures/singlyConnectedBonds.png (PNG copy)>] [33] (./exam.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1312,10 +1326,10 @@ fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy7.pfb>
-Output written on exam.pdf (32 pages, 902995 bytes).
+Output written on exam.pdf (33 pages, 904466 bytes).
 PDF statistics:
- 1053 PDF objects out of 1200 (max. 8388607)
- 259 compressed objects within 3 object streams
+ 1055 PDF objects out of 1200 (max. 8388607)
+ 260 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

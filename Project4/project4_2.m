@@ -2,11 +2,11 @@ close all;
 clear all;
 clc;
 
-M = 500;       % number of realizations / measurements
+M = 1000;       % number of realizations / measurements
 L = [25 50 100 200 400 800];
 pc = 0.59275;      % percolation treshold
-D = 2.0;%91.0/48.0;
-tau = 1.9;%187.0/91.0;
+D = 91.0/48.0;
+tau = 187.0/91.0;
 allarea = [];      % areas of all clusters sampled M times
 legendInfo = cell(length(L), 1);
 for j = 1:length(L)
@@ -47,7 +47,7 @@ for j = 1:length(L)
     % s: location of all bin centers
     [n,s] = hist(allarea, L(j)^2);
     max(s)
-    a = 2.0;                                % basis for logartithmic bins
+    a = 1.5;                                % basis for logartithmic bins
     logamax = ceil(log(max(s)) / log(a));   % edge of largest bin
     bins = a.^(0:1:logamax);                % bin edges
     nl = histc(allarea, bins);              % histogram with new bins
